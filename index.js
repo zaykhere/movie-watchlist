@@ -18,6 +18,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:4000",
+      "https://musing-northcutt-7948aa.netlify.app"
     ],
     credentials: true,
   })
