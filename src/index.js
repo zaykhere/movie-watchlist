@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
+import { GlobalProvider } from './components/context/GlobalState';
+import { AuthContextProvider } from './components/context/AuthContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalProvider>
+      <AuthContextProvider>
+    <HashRouter>
+      <App />
+        </HashRouter>
+        </AuthContextProvider>
+      </GlobalProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
